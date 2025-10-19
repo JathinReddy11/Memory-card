@@ -21,8 +21,8 @@ export default function ImageGallery({
   function handleClick(id) {
     setids((previds) => {
       if (previds[id]) {
-        setHighScore(currentScore);
         setCurrentScore(0);
+        setHighScore(highScore);
         return {};
       }
       return { ...previds, [id]: true };
